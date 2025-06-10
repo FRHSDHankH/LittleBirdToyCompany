@@ -3,6 +3,10 @@
   src: url(fonts/sugar-spice-brittney-murphy-design/Sugar\ &\ Spice\ demo.ttf);
 }
 
+.ss {
+  font-family: ss;
+}
+
 .scale {
   transition: 0.2s;
 }
@@ -25,8 +29,9 @@
 }
 
 body {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 #logo {
@@ -69,3 +74,6 @@ body {
   transition-property: width, left;
 }
 
+.aboutCards {
+  
+}
