@@ -27,4 +27,28 @@
 body {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
+}
+
+@keyframes trainMove {
+  0% {
+    transform: translateX(130%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.train {
+  animation: trainMove 15s ease-out forwards;
+}
+
+.bottom {
+  transform: translateY(-5vh);
+}
+
+.nob {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
