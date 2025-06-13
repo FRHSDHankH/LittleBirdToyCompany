@@ -7,6 +7,12 @@
   font-family: ss;
 }
 
+.text {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: #A05720;
+}
+
 .scale {
   transition: 0.2s;
 }
@@ -20,8 +26,40 @@
 }
 
 .size {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
+}
+
+.contactForm {
+  border: .2vw double #A05720;
+  color: #A05720;
+}
+input::placeholder{
+  color: white;
+}
+
+
+.contactForm input {
+  border: 2px solid #A05720;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #A05720;
+  background-color: transparent;
+}
+
+.contactForm input:focus {
+  outline: none;
+  color: #A05720;
+  border-color: #ff9f4d;
+  box-shadow: 0 0 5px #ffb36b;
+  background-color: transparent;
+}
+
+
+.brown {
+  color: rgb(80,59,59);
 }
 
 .backgroundMain {
@@ -40,13 +78,13 @@ body {
 
 
 .underlinedBtn {
+  position: relative;
   color:rgb(80,59,59);
   font-family: ss;
   border: none;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
-  opacity: 0;
 }
 
 
@@ -69,4 +107,39 @@ body {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+}
+
+#email::placeholder {
+  color: #A05720;
+  opacity: 1;
+}
+
+#firstName::placeholder {
+  color: #A05720;
+  opacity: 1;
+}
+
+#lastName::placeholder {
+  color: #A05720;
+  opacity: 1;
+}
+
+#inquiry::placeholder {
+  color: #A05720;
+  opacity: 1;
+}
+
+#phoneNumber::placeholder {
+  color: #A05720;
+  opacity: 1;
+}
+
+#submitBtn {
+  border: 2px solid #A05720;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #A05720;
+  background-color: transparent;
 }

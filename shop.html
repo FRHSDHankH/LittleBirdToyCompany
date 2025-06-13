@@ -21,9 +21,24 @@
   </head>
 
   <body class="backgroundMain">
-    <header></header>
+    <header> <nav class="navbar navbar-expand-lg bg-body-transparent">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ss fs-1">
+        <button class="nav-link mx-3 " onclick="location.href='about.html'"><span class="underlinedBtn">About Us</span></button>
+        <button class="nav-link mx-3 " onclick="location.href='shop.html'"><span class="underlinedBtn">Shop Now</span></button>
+        <button class="nav-link mx-3 "onclick="location.href='contact.html'""><span class="underlinedBtn">Contact Us</span></button>
+      </div>
+    </div>
+    <a class="navbar-brand" href="index.html"><img src="LBTCImgs/orangeLogo.png" id="logo"></a>
+  </div>
+</nav></header>
     <main>
-      <div class="container d-none d-lg-flex d-xl-flex align-items-center justify-content-center size">
+      <div class="container d-none d-lg-flex d-xl-flex align-items-center justify-content-center size" id="hideFr">
         <div class="container d-block text-center train">
           <div class="container m-0 p-0 position-absolute z-1">
             <img src="imgs/besttrain.png" alt="train" class="img-fluid">
@@ -54,23 +69,26 @@
               <div class="col-2">
               </div>
               <div class="col-2">
-                <button class="btn btn-transparent p-0 nob"><img src="imgs/boat.png" alt="toy" class="img-fluid opacity-0"></button>
+                <button class="btn btn-transparent p-0 nob" onclick="show('boat')"><img src="imgs/boat.png" alt="toy" class="img-fluid opacity-0"></button>
               </div>
               <div class="col-2">
-                <button class="btn btn-transparent p-0 nob"><img src="imgs/blocks.png" alt="toy" class="img-fluid opacity-0"></button>
+                <button class="btn btn-transparent p-0 nob" onclick="show('block')"><img src="imgs/blocks.png" alt="toy" class="img-fluid opacity-0"></button>
               </div>
               <div class="col-2">
-                <button class="btn btn-transparent p-0 nob"><img src="imgs/train.png" alt="toy" class="img-fluid opacity-0"></button>
+                <button class="btn btn-transparent p-0 nob" onclick="show('train')"><img src="imgs/train.png" alt="toy" class="img-fluid opacity-0"></button>
               </div>
               <div class="col-2">
-                <button class="btn btn-transparent p-0 nob"><img src="imgs/car.png" alt="toy" class="img-fluid opacity-0"></button>
+                <button class="btn btn-transparent p-0 nob" onclick="show('car')"><img src="imgs/car.png" alt="toy" class="img-fluid opacity-0"></button>
               </div>
               <div class="col-2">
-                <button class="btn btn-transparent p-0 nob"><img src="imgs/plane.png" alt="toy" class="img-fluid opacity-0"></button>
+                <button class="btn btn-transparent p-0 nob" onclick="show('airplane')"><img src="imgs/plane.png" alt="toy" class="img-fluid opacity-0"></button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="container size d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle z-3 d-none" id="unHideFr">
+        <div class="container d-block" id="modals"></div>
       </div>
     </main>
     <footer>
