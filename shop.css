@@ -3,6 +3,15 @@
   src: url(fonts/sugar-spice-brittney-murphy-design/Sugar\ &\ Spice\ demo.ttf);
 }
 
+.ss {
+  font-family: ss;
+}
+
+.text {
+  font-family: Helvetica, sans-serif;
+  color: #A05720;
+}
+
 .scale {
   transition: 0.2s;
 }
@@ -93,4 +102,43 @@ body {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+}
+
+.popIn {
+  animation: popIn 0.6s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.darkBrown {
+  color: rgb(80,59,59);
+}
+
+.lightBrown {
+  color: #A05720;
+}
+
+.border-brown {
+  border: 0.25vw solid rgb(80,59,59);
+}
+
+.border-brown-light {
+  border: 0.15vw solid rgb(80,59,59);
+}
+
+.carousel-item {
+  height: 50vh;
 }
