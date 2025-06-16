@@ -34,7 +34,7 @@
 }
 
 body {
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -141,4 +141,8 @@ body {
 
 .carousel-item {
   height: 50vh;
+}
+
+.backgroundDark {
+    background-color: rgba(255, 255, 255, 0.5); 
 }
