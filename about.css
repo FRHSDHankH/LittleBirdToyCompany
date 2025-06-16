@@ -107,3 +107,14 @@ body {
   font-weight: bold;
   color: #A05720;
 }
+
+.aboutCards {
+  height: fit-content;
+  background-color: #A05720;
+}
+
+.text2 {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}

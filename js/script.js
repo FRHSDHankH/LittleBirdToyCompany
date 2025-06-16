@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.id = p.id;
       modal.innerHTML = `
         <div class='row'>
-          <div class='col-12 darkBrown display-1 ss'>${p.name} - $${p.price}</div>
+          <div class='col-12 darkBrown display-1 ss'>${p.name} - $${p.price} - ${p.age}</div>
         </div>
         <div class='row lightBrown'>
           <div class='col-lg-6 col-sm-12'>
@@ -43,7 +43,30 @@ document.addEventListener("DOMContentLoaded", () => {
               </button>
             </div>
           </div>
-          <div class='col-lg-6 col-sm-12 fs-2 d-flex align-items-center justify-content-center text-center'>
+          <div class='col-lg-6 col-sm-12 fs-3 d-flex align-items-center justify-content-center text-center'>
+            <div class='row'>
+              <div class='col-12'>
+                <div class='row'>
+                  <div class='col-12'>
+                    Review
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col-12'>
+                    Review
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col-12'>
+                    Review
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row lightBrown'>
+          <div class='col-12 fs-3'>
             ${p.description}
           </div>
         </div>
