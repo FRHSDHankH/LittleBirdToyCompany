@@ -85,8 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
   render(products);
 });
 
-function getTopReviews(n) {
-  return reviews
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, n);
+function getTopReviews(r) {
+  return reviews.sort(() => 0.5 - Math.random()).slice(0, r);
 }
