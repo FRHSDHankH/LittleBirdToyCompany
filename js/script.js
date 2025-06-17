@@ -3,7 +3,6 @@ function show(productId) {
   product.classList.add("d-block");
   product.classList.remove("d-none");
   document.getElementById("unHideFr").classList.remove("d-none");
-  document.getElementById("hideFr").classList.add("d-none");
 }
 
 function close(productId) {
@@ -11,7 +10,6 @@ function close(productId) {
   product.classList.remove("d-block");
   product.classList.add("d-none");
   document.getElementById("unHideFr").classList.add("d-none");
-  document.getElementById("hideFr").classList.remove("d-none");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,17 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class='col-12'>
                 <div class='row'>
                   <div class='col-12'>
-                    Review
-                  </div>
-                </div>
-                <div class='row'>
-                  <div class='col-12'>
-                    Review
-                  </div>
-                </div>
-                <div class='row'>
-                  <div class='col-12'>
-                    Review
+                    <div class="reviews mt-3">
+                      <h5>Reviews</h5>
+                      ${getTopReviews(3).map(review => `
+                        <div class="review border rounded p-2 mb-2">
+                          <div class="d-flex justify-content-between">
+                            <strong>${review.reviewer}</strong>
+                            <small class="text-muted">${review.date}</small>
+                          </div>
+                          <div class="text-warning mb-1">
+                            ${"★".repeat(review.rating)}${"☆".repeat(5 - review.rating)}
+                          </div>
+                          <p class="mb-0">${review.comment}</p>
+                        </div>
+                      `).join("")}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,3 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   render(products);
 });
+
+function getTopReviews(n) {
+  return reviews
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, n);
+}
