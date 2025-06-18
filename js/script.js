@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
                       ${getTopReviews(3).map(review => `
                         <div class="review border rounded p-2 mb-2">
                           <div class="d-flex justify-content-between">
-                            <strong>${review.reviewer}</strong>
-                            <small class="text-muted">${review.date}</small>
+                            <p class='fw-bold fs-4'>${review.reviewer}</p>
+                            <p class="fw-bold fs-4">${review.date}</p>
                           </div>
-                          <div class="text-warning mb-1">
+                          <div class="text-warning mb-1 fs-5">
                             ${"★".repeat(review.rating)}${"☆".repeat(5 - review.rating)}
                           </div>
-                          <p class="mb-0">${review.comment}</p>
+                          <p class="mb-0 fs-6">${review.comment}</p>
                         </div>
                       `).join("")}
                     </div>
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         <div class='row lightBrown'>
-          <div class='col-12 fs-3'>
+          <div class='col-12 fs-4'>
             ${p.description}
           </div>
         </div>
