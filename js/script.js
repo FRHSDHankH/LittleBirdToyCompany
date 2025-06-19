@@ -88,3 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function getTopReviews(r) {
   return reviews.sort(() => 0.5 - Math.random()).slice(0, r);
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth >= 992) { // Bootstrap lg breakpoint is 992px
+      const audio = document.getElementById('homeAudio');
+      audio.play().catch(function (error) {
+        console.log("Audio play was prevented by the browser:", error);
+      });
+    }
+  });

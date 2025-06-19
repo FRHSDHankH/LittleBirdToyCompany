@@ -169,8 +169,18 @@ body {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .modal {
+    overflow: scroll;
+  }
+}
+
 @media (min-width: 992px) {
     body {
+      overflow: hidden;
+    }
+
+    .modal {
       overflow: hidden;
     }
   }
